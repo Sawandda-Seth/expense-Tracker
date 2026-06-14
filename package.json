@@ -1,0 +1,24 @@
+{
+  "name": "expense-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sawandda-Seth/expense-Tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Sawandda-Seth/expense-Tracker/issues"
+  },
+  "homepage": "https://github.com/Sawandda-Seth/expense-Tracker#readme",
+  "devDependencies": {
+    "jest": "^30.4.2"
+  }
+}
