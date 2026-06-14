@@ -26,7 +26,9 @@
             </h1>
             <!-- Form -->
              <div class="grid md:grid-cols-4 gap-4">
+
                 <input id="description" type="text"placeholder="Expense Description" class="p-3 rounded-lg text-black">
+
                 <input id="Amnt" type="number" placeholder="Amount in Ksh" class="p-3 rounded-lg text-black" >
                 <select id="Expense-cat" class="p-3 rounded-lg text-black" >
                     <option>Food</option> 
@@ -49,10 +51,31 @@
                     <option value="Bills">Bills</option> 
                     <option value="Shopping">Shopping</option> 
                     <option value="Entertainment"> Entertainment </option>
+                    </select>
+             <!-- Expense-Statistics -->
+              <div class="grid md:grid-cols-2 gap-4 mt-8">
+                <div class="glass rounded-xl p-5">
+                    <h2 class="font-bold text-xl"> Total Expenses </h2>
+                    <p id="TotalExpense" class="text-3xl text-green-400" > 
+                        KES 0 
+                    </p>
+                </div>
+                <div class="glass rounded-xl p-5"> 
+                    <h2 class="font-bold text-xl"> 
+                        Number of Expenses 
+                    </h2>
+                         <p id="expenseCount" class="text-3xl text-blue-400" > 
+                             0 
+                        </p>
+                </div>
 
-                </select>
               </div>
-        </div>
-    </div>    
+              <!-- Expense List -->
+                <div id="expenseList" class="mt-8 space-y-4" >
+
+                </div> 
+            </div> 
+        </div> 
+<script src="script.js"></script>    
 </body>
 </html>
