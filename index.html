@@ -18,6 +18,28 @@
         }
     </style>
 </head>
-<body>    
+<body class="text-white p-6">
+    <div class="max-w-5xl mx-auto">
+        <div class="glass rounded-3xl p-8 shadow-2xl">
+            <h1 class="text-5xl font-bold text-center mb-8">
+                Expense-Tracker
+            </h1>
+            <!-- Form -->
+             <div class="grid md:grid-cols-4 gap-4">
+                <input id="description" type="text"placeholder="Expense Description" class="p-3 rounded-lg text-black">
+                <input id="Amnt" type="number" placeholder="Amount in Ksh" class="p-3 rounded-lg text-black" >
+                <select id="Expense-cat" class="p-3 rounded-lg text-black" >
+                    <option>Food</option> 
+                    <option>Transport</option> 
+                    <option>Bills</option> 
+                    <option>Shopping</option>
+                     <option>Entertainment</option>
+                </select>
+                <button id="addBtn" class="bg-purple-600 hover:bg-purple-700 rounded-lg" > 
+                    Add Expense
+                 </button>
+             </div>
+        </div>
+    </div>    
 </body>
 </html>
