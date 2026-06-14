@@ -14,7 +14,7 @@
         .glass{
             background:rgba(255,255,255,0.08);
             backdrop-filter:blur(15px);
-            border:1px solid rgba(255,255,255.0,15)
+            border:1px solid rgba(255, 255, 255, 0.15)
         }
     </style>
 </head>
@@ -29,18 +29,19 @@
 
                 <input id="description" type="text"placeholder="Expense Description" class="p-3 rounded-lg text-black">
 
-                <input id="Amount" type="number" placeholder="Amount in Ksh" class="p-3 rounded-lg text-black" >
-                <select id="Category" class="p-3 rounded-lg text-black" >
+                <input id="amount" type="number" placeholder="Amount in Ksh" class="p-3 rounded-lg text-black" >
+                <select id="category" class="p-3 rounded-lg text-black" >
                     <option>Food</option> 
                     <option>Transport</option> 
                     <option>Bills</option> 
                     <option>Shopping</option>
                      <option>Entertainment</option>
                 </select>
-                <button id="Category" class="bg-purple-600 hover:bg-purple-700 rounded-lg" > 
+                <button id="addBtn" class="bg-purple-600 hover:bg-purple-700 rounded-lg" > 
                     Add Expense
                  </button>
              </div>
+             
              <!-- Filter -->
               <div class="mt-6">
                 <select id="filterCategory" class="p-3 rounded-lg text-black w-full" >
@@ -52,11 +53,13 @@
                     <option value="Shopping">Shopping</option> 
                     <option value="Entertainment"> Entertainment </option>
                     </select>
+                    </div>
+            
              <!-- Expense-Statistics -->
               <div class="grid md:grid-cols-2 gap-4 mt-8">
                 <div class="glass rounded-xl p-5">
                     <h2 class="font-bold text-xl"> Total Expenses </h2>
-                    <p id="TotalExpense" class="text-3xl text-green-400" > 
+                    <p id="totalExpenses" class="text-3xl text-green-400" > 
                         KES 0 
                     </p>
                 </div>
