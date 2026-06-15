@@ -1,4 +1,4 @@
-class Expense {
+class Expense { // Creates a blueprint for Expense objects
 
     constructor(
         id,
@@ -6,7 +6,7 @@ class Expense {
         amount,
         category
     ){
-
+// Assign 
         this.id = id;
         this.description = description;
         this.amount = amount;
@@ -14,11 +14,11 @@ class Expense {
     }
 }
 
-class ExpenseTracker {
+class ExpenseTracker { // Class responsible for managing expenses
 
     constructor(){
 
-        this.expenses = [];
+        this.expenses = [];// Creates an empty array to store expenses
     }
 
     addExpense(expense){
