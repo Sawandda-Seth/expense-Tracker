@@ -11,19 +11,21 @@ class Expense {
 // Expense Tracker Class
 class ExpenseTracker {
     constructor() {
+        //Runs if JSON parsing fails.
     try {
         this.expenses =
-            JSON.parse(localStorage.getItem("expenses")) || [];
+            JSON.parse(localStorage.getItem("expenses")) || []; //Creates a fresh empty array.
     } catch (error) {
-        this.expenses = [];
+        this.expenses = []; //Creates a fresh empty array.
     }
 }
+
     saveExpenses() {
-        localStorage.setItem("expenses", JSON.stringify(this.expenses));
+        localStorage.setItem("expenses", JSON.stringify(this.expenses)); //Reads saved expenses from localStorage.
     }
 
     addExpense(expense) {
-        this.expenses = [...this.expenses, expense];
+        this.expenses = [...this.expenses, expense]; //spread operator
         this.saveExpenses();
     }
 
@@ -43,12 +45,14 @@ class ExpenseTracker {
     }
 
     filterExpenses(category) {
+        //Uses the filter method
         return this.expenses.filter(
             expense => expense.category === category
         );
     }
 
     // Rest Operator
+
     addManyExpenses(...expenses) {
         this.expenses.push(...expenses);
         this.saveExpenses();
@@ -64,6 +68,7 @@ const totalExpenses = document.getElementById("totalExpenses");
 const expenseCount = document.getElementById("expenseCount");
 
 // Render Expenses
+//Displays expenses on the page.
 function renderExpenses(expenses = tracker.expenses) {
 
     expenseList.innerHTML = "";
@@ -150,7 +155,7 @@ document
             renderExpenses();
             return;
         }
-
+   //Displays all expenses
         renderExpenses(
             tracker.filterExpenses(category)
         );

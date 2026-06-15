@@ -24,8 +24,7 @@ class ExpenseTracker {
     addExpense(expense){
 
         this.expenses = [
-            ...this.expenses,
-            expense
+            ...this.expenses, expense
         ];
     }
 
@@ -40,9 +39,7 @@ class ExpenseTracker {
 
     getTotalExpenses(){
 
-        return this.expenses.reduce(
-            (total, expense) =>
-            total + expense.amount,
+        return this.expenses.reduce((total, expense) => total + expense.amount,
             0
         );
     }
@@ -50,13 +47,10 @@ class ExpenseTracker {
     filterExpenses(category){
 
         return this.expenses.filter(
-            expense =>
-            expense.category === category
+            expense => expense.category === category
         );
     }
 }
 
-module.exports = {
-    Expense,
-    ExpenseTracker
+module.exports = {Expense,ExpenseTracker
 };
